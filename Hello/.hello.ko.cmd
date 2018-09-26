@@ -1,0 +1,1 @@
+cmd_/home/daniel/nfs/Raspberry_Driver/Hello/hello.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/daniel/nfs/Raspberry_Driver/Hello/hello.ko /home/daniel/nfs/Raspberry_Driver/Hello/hello.o /home/daniel/nfs/Raspberry_Driver/Hello/hello.mod.o ;  true

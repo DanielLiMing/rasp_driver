@@ -7,8 +7,6 @@
  * @Email: 111111111111
  */
 
-
-
 #include <linux/miscdevice.h>
 #include <linux/delay.h>
 #include <asm/irq.h>
@@ -135,12 +133,13 @@ static const struct file_operations leds_fops = {
 
 static struct miscdevice misc = {
     .minor = MISC_DYNAMIC_MINOR,
-    .name = "my leds",
+    .name = "my_leds",
     .fops = &leds_fops,
 };
 static int __init leds_init(void)
 {
     int ret;
+    printk("*****************init****************\r\n");
     ret = misc_register(&misc);
     bcm2835_gpio_fsel(PIN,BCM2835_GPIO_FSEL_OUT);
     bcm2835_gpio_set(PIN);
@@ -150,6 +149,7 @@ static int __init leds_init(void)
 
 static void __exit leds_exit(void)
 {
+    printk("*****************exit****************\r\n");
     bcm2835_gpio_clr(PIN);
     misc_deregister(&misc);
     printk("my leds exit\r\n");

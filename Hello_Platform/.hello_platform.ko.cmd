@@ -1,1 +1,0 @@
-cmd_/home/daniel/nfs/Raspberry_Driver/Hello_Platform/hello_platform.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/daniel/nfs/Raspberry_Driver/Hello_Platform/hello_platform.ko /home/daniel/nfs/Raspberry_Driver/Hello_Platform/hello_platform.o /home/daniel/nfs/Raspberry_Driver/Hello_Platform/hello_platform.mod.o ;  true
